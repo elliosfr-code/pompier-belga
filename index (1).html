@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Belga City Fire & Rescue – Service d’incendie et de secours</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚒</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
+:root{--red:#c8102e;--red-d:#a30d25;--ink:#1d2b3a;--navy:#1d2b3a;--mut:#5b6675;--line:#dfe3e8;--bg:#f3f5f7;--w:#fff;--yel:#f2c230}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Public Sans',system-ui,sans-serif;background:var(--w);color:var(--ink);line-height:1.6}
+h1,h2,h3{line-height:1.2;font-weight:700;letter-spacing:-.01em}a{color:inherit}:focus-visible{outline:3px solid #1a5fb4;outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.util{background:var(--ink);color:#d7dde6;font-size:.82rem;padding:7px 0}.util .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.util b{color:#fff}
+header{position:sticky;top:0;z-index:10;background:var(--w);border-bottom:1px solid var(--line);box-shadow:0 2px 0 var(--red)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:14px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo i{width:42px;height:46px;background:var(--red);color:#fff;font:800 1rem 'Public Sans';font-style:normal;display:grid;place-items:center;border-radius:4px 4px 21px 21px}
+.logo span{font-weight:800;line-height:1.15}.logo small{display:block;font-weight:500;color:var(--mut);font-size:.78rem}
+nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap}nav a{text-decoration:none;font-weight:600;font-size:.92rem;padding:8px 12px;border-radius:4px;color:var(--ink)}nav a:hover{background:var(--bg);color:var(--red)}
+nav a.p{background:var(--red);color:#fff}nav a.p:hover{background:var(--red-d);color:#fff}
+.hero{background:var(--bg);border-bottom:1px solid var(--line);padding:56px 0}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2rem,4.6vw,3.2rem);color:var(--ink)}.hero h1 span{color:var(--red)}
+.hero p{margin:16px 0 26px;color:var(--mut);font-size:1.08rem;max-width:52ch}
+.side{background:var(--w);border:1px solid var(--line);border-top:5px solid var(--red);border-radius:4px;padding:6px 0}
+.side h3{font-size:1.05rem;padding:14px 20px 8px}.side a{display:flex;justify-content:space-between;gap:10px;padding:13px 20px;border-top:1px solid var(--line);text-decoration:none;font-weight:600}.side a:hover{background:var(--bg);color:var(--red)}.side a::after{content:"›";color:var(--red);font-size:1.3rem;line-height:1}
+.btn{display:inline-block;border:0;cursor:pointer;background:var(--red);color:#fff;font:600 .98rem 'Public Sans';padding:12px 22px;border-radius:4px;text-decoration:none}.btn:hover{background:var(--red-d)}
+.btn.alt{background:var(--w);color:var(--ink);border:1px solid var(--ink);padding:11px 21px;margin-left:8px}.btn.alt:hover{background:var(--ink);color:#fff}
+.alert{background:#fff4e5;border-bottom:1px solid #f0d9b5;color:#6b4300;text-align:center;padding:10px 20px;font-size:.92rem}
+section{padding:56px 0}section.g{background:var(--bg)}
+h2{font-size:1.9rem;color:var(--ink);padding-bottom:10px;margin-bottom:6px;position:relative}h2::after{content:"";display:block;width:54px;height:4px;background:var(--red);margin-top:10px}
+.sub{color:var(--mut);margin:12px 0 26px;max-width:64ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--w);border:1px solid var(--line);border-radius:4px}
+.tile{padding:22px;border-left:5px solid var(--red)}.tile h3{font-size:1.1rem;margin:2px 0 6px}.tile p{color:var(--mut);font-size:.93rem}.tile .ic{font-size:1.6rem}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:2px solid var(--line);margin-bottom:18px}
+.tab{cursor:pointer;border:0;background:none;color:var(--mut);font:600 .93rem 'Public Sans';padding:11px 16px;border-bottom:3px solid transparent;margin-bottom:-2px}.tab:hover{color:var(--ink)}.tab[aria-selected=true]{color:var(--red);border-color:var(--red)}
+.row{display:flex;justify-content:space-between;gap:16px;padding:14px 22px;border-bottom:1px solid var(--line)}.row:nth-child(even){background:#fafbfc}.row:last-child{border:0}
+.row b{color:var(--red);font-size:1.1rem;white-space:nowrap}
+#search{width:100%;max-width:340px;margin-bottom:16px;padding:11px 13px;border:1px solid #b9c1cc;border-radius:4px;font:inherit}
+form,.box{background:var(--w);color:var(--ink);border:1px solid var(--line);border-top:5px solid var(--red);padding:26px;border-radius:4px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:.9rem}.full{grid-column:1/-1}
+input,select,textarea{font:inherit;font-weight:400;padding:10px 12px;border-radius:4px;border:1px solid #b9c1cc;background:#fff;color:var(--ink)}
+.msg{grid-column:1/-1;padding:13px;border-radius:4px;display:none;font-weight:500;color:#fff}.msg.ok{display:block;background:#1f6f43}.msg.ko{display:block;background:var(--red-d)}
+.cond ul{padding-left:20px;display:grid;gap:8px}
+footer{background:var(--ink);color:#c3ccd8;font-size:.92rem;padding:40px 0 20px}footer .grid{margin-bottom:22px}footer h3{color:#fff;font-size:1rem;margin-bottom:8px}footer a{display:block;text-decoration:none;padding:3px 0}footer a:hover{color:#fff;text-decoration:underline}
+footer .c{border-top:1px solid #34465b;padding-top:16px;font-size:.82rem;text-align:center}
+table{width:100%;border-collapse:collapse}th,td{padding:11px 16px;text-align:left;border-bottom:1px solid var(--line)}th{background:var(--bg);font-weight:700;font-size:.88rem}td.r,th.r{text-align:right}
+.tag{display:inline-block;background:#1f6f43;color:#fff;border-radius:20px;padding:2px 10px;font-size:.8rem}
+.stat{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}.stat div{flex:1;min-width:150px;padding:16px 20px}.stat b{display:block;font-size:1.7rem;color:var(--red)}
+.login{max-width:400px;margin:60px auto;grid-template-columns:1fr}
+@media(max-width:800px){.hero .wrap{grid-template-columns:1fr}form,.box{grid-template-columns:1fr}.btn.alt{margin:10px 0 0}nav a{padding:6px 8px}table{font-size:.85rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+</style></head><body>
+<div class="util"><div class="wrap"><span>Service public de secours de Belga City</span><span>Urgence : contactez les pompiers <b>directement en jeu</b></span></div></div>
+<header><div class="wrap"><a class="logo" href="#top"><i>BC</i><span>Belga City Fire & Rescue<small>Service d’incendie et de secours</small></span></a>
+<nav><a href="#missions">Missions</a><a href="#tarifs">Tarifs</a><a href="#rdv">Rendez-vous</a><a href="#conditions">Facturation</a><a class="p" href="portail.html">Portail pompier</a></nav></div></header>
+<div class="hero" id="top"><div class="wrap"><div><h1>Protéger, secourir, <span>intervenir</span> au service de Belga City</h1><p>Le service d’incendie et de secours assure la lutte contre l’incendie, le secours à personne, la désincarcération et la prévention pour les habitants et les entreprises.</p><a class="btn" href="#rdv">Prendre rendez-vous</a><a class="btn alt" href="#tarifs">Consulter les tarifs</a></div>
+<aside class="side"><h3>Accès rapide</h3><a href="#tarifs">Fiche tarifaire des prestations</a><a href="#rdv" data-go="install">Installation incendie</a><a href="#rdv" data-go="verif">Vérification des installations incendie</a><a href="#rdv" data-go="colonel">Rendez-vous avec le Colonel</a><a href="portail.html">Portail des sapeurs-pompiers</a></aside></div></div>
+<div class="alert"><b>Urgence :</b> appelez directement les pompiers en jeu. Les formulaires de ce site concernent uniquement les demandes non urgentes.</div>
+<section id="missions"><div class="wrap"><h2>Nos missions</h2><p class="sub">Des sapeurs-pompiers mobilisés pour la sécurité des habitants et des entreprises.</p><div class="grid">
+<div class="card tile"><div class="ic">🔥</div><h3>Lutte contre l’incendie</h3><p>Véhicules, habitations, commerces, industries et végétation.</p></div>
+<div class="card tile"><div class="ic">🚑</div><h3>Secours à personne</h3><p>Prise en charge, réanimation et transport vers l’hôpital.</p></div>
+<div class="card tile"><div class="ic">🚗</div><h3>Accidents de la route</h3><p>Balisage, sécurisation de la zone et désincarcération.</p></div>
+<div class="card tile"><div class="ic">🧯</div><h3>Prévention</h3><p>Installations incendie, vérifications, inspections et exercices de sécurité.</p></div></div></div></section>
+<section class="g" id="tarifs"><div class="wrap"><h2>Fiche tarifaire des prestations</h2><p class="sub">Tarifs en euros (€). Choisissez une catégorie ou recherchez une prestation.</p><input id="search" type="search" placeholder="Rechercher une prestation…" aria-label="Rechercher une prestation"><div class="tabs" id="ptabs"></div><div class="card" id="plist"></div></div></section>
+<section id="rdv"><div class="wrap"><h2>Prendre rendez-vous</h2><p class="sub">Votre demande est transmise à l’état-major, qui vous répond en jeu ou sur Discord.</p>
+<div class="tabs" id="rtabs"><button class="tab" aria-selected="true" data-t="install">Installation incendie</button><button class="tab" aria-selected="false" data-t="verif">Vérification des installations incendie</button><button class="tab" aria-selected="false" data-t="colonel">Rendez-vous avec le Colonel</button></div>
+<form id="f" novalidate><label>Nom et prénom RP<input name="nom" required></label><label>Téléphone (en jeu)<input name="tel" required inputmode="tel"></label><label>Pseudo Discord (facultatif)<input name="discord"></label><label><span id="lobj"></span><select name="objet" id="objet"></select></label><label>Date souhaitée<input type="date" name="date" id="date" required></label><label>Créneau<select name="heure" id="heure"></select></label><label class="full" id="ladr">Adresse / lieu<input name="adresse"></label><label class="full">Détails de la demande<textarea name="details" rows="4"></textarea></label><div class="full"><button class="btn" id="send">Envoyer la demande</button></div><div class="msg" id="msg" role="status"></div></form></div></section>
+<section class="g cond" id="conditions"><div class="wrap"><h2>Conditions de facturation</h2><br><div class="card" style="padding:22px 28px"><ul><li>Les tarifs sont exprimés en euros.</li><li>Une seule facturation par intervention, sauf prestations supplémentaires validées.</li><li>Les interventions d’urgence peuvent être gratuites si leur mutuelle le permet.</li><li>Toute prestation doit être justifiée par un rapport d’intervention.</li></ul></div></div></section>
+<footer><div class="wrap"><div class="grid"><div><h3>Belga City Fire & Rescue</h3>Protéger • Secourir • Intervenir<br>Sapeurs-Pompiers de Belga City</div><div><h3>Le service</h3><a href="#missions">Missions</a><a href="#tarifs">Tarifs</a><a href="#conditions">Facturation</a></div><div><h3>Accès</h3><a href="#rdv">Prendre rendez-vous</a><a href="portail.html">Portail pompier</a></div></div><div class="c">Belga City RP – site de jeu de rôle fictif. Tarifs exprimés en euros.</div></div></footer>
+<script>
+const CONFIG={COLONEL:"Colonel [NOM]",WEBHOOK:""}; // webhook Discord des demandes (salon réservé à l'état-major)
+const PRIX={"🚑 Transports et secours":[["Transport vers l’hôpital",1100],["Transport médical non urgent",450],["Transport longue distance",570],["Assistance à une personne blessée",150],["Réanimation d’une victime",370],["Prise en charge de plusieurs victimes (selon le nombre, à déterminer)",400,"à partir de"],["Assistance sur accident de la route",290]],
+"🔥 Interventions incendie":[["Feu de véhicule",300],["Feu d’habitation",500],["Feu de commerce",600],["Extinction d’un feu de végétation",350],["Feu industriel",800],["Reconnaissance et sécurisation des lieux",150],["Risque d’explosion",500]],
+"🚗 Accidents et désincarcération":[["Balisage d’un accident",100],["Sécurisation de la zone",150],["Désincarcération d’une victime",400],["Nettoyage et sécurisation après accident",200],["Intervention avec plusieurs véhicules de secours",500]],
+"🧰 Autres prestations":[["Assistance technique simple",100],["Pompage d’une cave inondée",250],["Évacuation préventive d’un bâtiment",200],["Inspection de sécurité d’un établissement",460],["Exercice de sécurité pour une entreprise",780]]};
+const $=s=>document.querySelector(s);let cat=Object.keys(PRIX)[0];
+function draw(){const q=$("#search").value.trim().toLowerCase();$("#ptabs").innerHTML=Object.keys(PRIX).map(c=>`<button class="tab" aria-selected="${!q&&c===cat}" data-c="${c}">${c}</button>`).join("");
+const r=q?Object.values(PRIX).flat().filter(x=>x[0].toLowerCase().includes(q)):PRIX[cat];
+$("#plist").innerHTML=r.length?r.map(x=>`<div class="row"><span>${x[0]}</span><b>${x[2]?"<small>"+x[2]+" </small>":""}${x[1].toLocaleString("fr-FR")} €</b></div>`).join(""):'<div class="row">Aucune prestation trouvée.</div>'}
+$("#ptabs").onclick=e=>{if(e.target.dataset.c){cat=e.target.dataset.c;$("#search").value="";draw()}};$("#search").oninput=draw;draw();
+const T={install:{o:"Type d’installation",l:["Détecteurs de fumée","Extincteurs","Sprinklers / extinction automatique","Alarme incendie","Issues et éclairage de secours","Audit complet de sécurité incendie"],a:1,t:"Installation incendie"},verif:{o:"Éléments à vérifier",l:["Extincteurs","Détecteurs de fumée","Alarme incendie","Sprinklers / extinction automatique","Issues et éclairage de secours","Vérification complète de l’établissement"],a:1,t:"Vérification des installations incendie"},colonel:{o:"Motif du rendez-vous",l:["Candidature / recrutement","Partenariat ou convention","Plainte ou réclamation","Demande de formation","Autre sujet"],a:0,t:"Rendez-vous avec "+CONFIG.COLONEL}};let ty="install";
+function setT(t){ty=t;document.querySelectorAll("#rtabs .tab").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===t));$("#lobj").textContent=T[t].o;$("#objet").innerHTML=T[t].l.map(o=>"<option>"+o+"</option>").join("");$("#ladr").style.display=T[t].a?"":"none"}
+document.querySelectorAll("[data-go]").forEach(a=>a.onclick=()=>setT(a.dataset.go));
+$("#rtabs").onclick=e=>{if(e.target.dataset.t)setT(e.target.dataset.t)};setT("install");
+const hs=[];for(let h=14;h<=22;h++)hs.push(h+"h00",h+"h30");$("#heure").innerHTML=hs.map(h=>"<option>"+h+"</option>").join("");$("#date").min=new Date().toISOString().slice(0,10);
+$("#f").onsubmit=async e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target)),m=$("#msg");
+if(!f.nom.trim()||!f.tel.trim()||!f.date){m.className="msg ko";m.textContent="Renseignez au minimum votre nom, votre téléphone et la date.";return}
+const d=new Date(f.date).toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"});
+const r=`🚒 **${T[ty].t}**\n👤 ${f.nom} – 📞 ${f.tel}${f.discord?" – Discord : "+f.discord:""}\n📌 ${f.objet}${T[ty].a&&f.adresse?"\n📍 "+f.adresse:""}\n📅 ${d} à ${f.heure}\n📝 ${f.details||"–"}`;
+if(!CONFIG.WEBHOOK){try{await navigator.clipboard.writeText(r)}catch(_){}m.className="msg ok";m.textContent="Demande copiée : envoyez-la à l’état-major sur Discord (webhook non configuré).";return}
+$("#send").disabled=true;try{const x=await fetch(CONFIG.WEBHOOK,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({username:"Belga City Fire & Rescue",content:r})});if(!x.ok)throw 0;m.className="msg ok";m.textContent="Demande envoyée. L’état-major vous recontactera.";e.target.reset()}catch(_){m.className="msg ko";m.textContent="Échec de l’envoi. Réessayez ou contactez un pompier en jeu."}$("#send").disabled=false};
+</script></body></html>
