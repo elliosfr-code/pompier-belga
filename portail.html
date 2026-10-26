@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Portail pompier – Belga City Fire & Rescue</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚒</text></svg>"><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
+:root{--red:#c8102e;--red-d:#a30d25;--ink:#1d2b3a;--navy:#1d2b3a;--mut:#5b6675;--line:#dfe3e8;--bg:#f3f5f7;--w:#fff;--yel:#f2c230}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Public Sans',system-ui,sans-serif;background:var(--w);color:var(--ink);line-height:1.6}
+h1,h2,h3{line-height:1.2;font-weight:700;letter-spacing:-.01em}a{color:inherit}:focus-visible{outline:3px solid #1a5fb4;outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.util{background:var(--ink);color:#d7dde6;font-size:.82rem;padding:7px 0}.util .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.util b{color:#fff}
+header{position:sticky;top:0;z-index:10;background:var(--w);border-bottom:1px solid var(--line);box-shadow:0 2px 0 var(--red)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:14px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo i{width:42px;height:46px;background:var(--red);color:#fff;font:800 1rem 'Public Sans';font-style:normal;display:grid;place-items:center;border-radius:4px 4px 21px 21px}
+.logo span{font-weight:800;line-height:1.15}.logo small{display:block;font-weight:500;color:var(--mut);font-size:.78rem}
+nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap}nav a{text-decoration:none;font-weight:600;font-size:.92rem;padding:8px 12px;border-radius:4px;color:var(--ink)}nav a:hover{background:var(--bg);color:var(--red)}
+nav a.p{background:var(--red);color:#fff}nav a.p:hover{background:var(--red-d);color:#fff}
+.hero{background:var(--bg);border-bottom:1px solid var(--line);padding:56px 0}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2rem,4.6vw,3.2rem);color:var(--ink)}.hero h1 span{color:var(--red)}
+.hero p{margin:16px 0 26px;color:var(--mut);font-size:1.08rem;max-width:52ch}
+.side{background:var(--w);border:1px solid var(--line);border-top:5px solid var(--red);border-radius:4px;padding:6px 0}
+.side h3{font-size:1.05rem;padding:14px 20px 8px}.side a{display:flex;justify-content:space-between;gap:10px;padding:13px 20px;border-top:1px solid var(--line);text-decoration:none;font-weight:600}.side a:hover{background:var(--bg);color:var(--red)}.side a::after{content:"›";color:var(--red);font-size:1.3rem;line-height:1}
+.btn{display:inline-block;border:0;cursor:pointer;background:var(--red);color:#fff;font:600 .98rem 'Public Sans';padding:12px 22px;border-radius:4px;text-decoration:none}.btn:hover{background:var(--red-d)}
+.btn.alt{background:var(--w);color:var(--ink);border:1px solid var(--ink);padding:11px 21px;margin-left:8px}.btn.alt:hover{background:var(--ink);color:#fff}
+.alert{background:#fff4e5;border-bottom:1px solid #f0d9b5;color:#6b4300;text-align:center;padding:10px 20px;font-size:.92rem}
+section{padding:56px 0}section.g{background:var(--bg)}
+h2{font-size:1.9rem;color:var(--ink);padding-bottom:10px;margin-bottom:6px;position:relative}h2::after{content:"";display:block;width:54px;height:4px;background:var(--red);margin-top:10px}
+.sub{color:var(--mut);margin:12px 0 26px;max-width:64ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--w);border:1px solid var(--line);border-radius:4px}
+.tile{padding:22px;border-left:5px solid var(--red)}.tile h3{font-size:1.1rem;margin:2px 0 6px}.tile p{color:var(--mut);font-size:.93rem}.tile .ic{font-size:1.6rem}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:2px solid var(--line);margin-bottom:18px}
+.tab{cursor:pointer;border:0;background:none;color:var(--mut);font:600 .93rem 'Public Sans';padding:11px 16px;border-bottom:3px solid transparent;margin-bottom:-2px}.tab:hover{color:var(--ink)}.tab[aria-selected=true]{color:var(--red);border-color:var(--red)}
+.row{display:flex;justify-content:space-between;gap:16px;padding:14px 22px;border-bottom:1px solid var(--line)}.row:nth-child(even){background:#fafbfc}.row:last-child{border:0}
+.row b{color:var(--red);font-size:1.1rem;white-space:nowrap}
+#search{width:100%;max-width:340px;margin-bottom:16px;padding:11px 13px;border:1px solid #b9c1cc;border-radius:4px;font:inherit}
+form,.box{background:var(--w);color:var(--ink);border:1px solid var(--line);border-top:5px solid var(--red);padding:26px;border-radius:4px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:.9rem}.full{grid-column:1/-1}
+input,select,textarea{font:inherit;font-weight:400;padding:10px 12px;border-radius:4px;border:1px solid #b9c1cc;background:#fff;color:var(--ink)}
+.msg{grid-column:1/-1;padding:13px;border-radius:4px;display:none;font-weight:500;color:#fff}.msg.ok{display:block;background:#1f6f43}.msg.ko{display:block;background:var(--red-d)}
+.cond ul{padding-left:20px;display:grid;gap:8px}
+footer{background:var(--ink);color:#c3ccd8;font-size:.92rem;padding:40px 0 20px}footer .grid{margin-bottom:22px}footer h3{color:#fff;font-size:1rem;margin-bottom:8px}footer a{display:block;text-decoration:none;padding:3px 0}footer a:hover{color:#fff;text-decoration:underline}
+footer .c{border-top:1px solid #34465b;padding-top:16px;font-size:.82rem;text-align:center}
+table{width:100%;border-collapse:collapse}th,td{padding:11px 16px;text-align:left;border-bottom:1px solid var(--line)}th{background:var(--bg);font-weight:700;font-size:.88rem}td.r,th.r{text-align:right}
+.tag{display:inline-block;background:#1f6f43;color:#fff;border-radius:20px;padding:2px 10px;font-size:.8rem}
+.stat{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}.stat div{flex:1;min-width:150px;padding:16px 20px}.stat b{display:block;font-size:1.7rem;color:var(--red)}
+.login{max-width:400px;margin:60px auto;grid-template-columns:1fr}
+@media(max-width:800px){.hero .wrap{grid-template-columns:1fr}form,.box{grid-template-columns:1fr}.btn.alt{margin:10px 0 0}nav a{padding:6px 8px}table{font-size:.85rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+</style></head><body>
+<header><div class="wrap"><a class="logo" href="index.html"><i>BC</i><span>Portail pompier<small>Belga City Fire & Rescue</small></span></a><nav><a href="index.html">Site public</a><a href="#" id="out" hidden>Déconnexion</a></nav></div></header>
+<main class="wrap" style="padding-bottom:60px">
+<form class="box login" id="lg"><h2 style="font-size:1.8rem">Connexion</h2><label>Matricule<input id="mat" required autocomplete="username"></label><label>Mot de passe<input id="pw" type="password" required autocomplete="current-password"></label><button class="btn">Se connecter</button><div class="msg" id="lm"></div></form>
+<div id="app" hidden style="padding-top:34px">
+<h2 id="hi" style="font-size:2.2rem;color:var(--navy)"></h2><p class="sub" id="who"></p>
+<div class="tabs" id="tb"><button class="tab" data-v="svc" aria-selected="true">Mon service</button><button class="tab" data-v="pay" aria-selected="false">Hub de paye</button><button class="tab" data-v="adm" aria-selected="false" id="tadm" hidden>Administration</button></div>
+<div id="svc"><div class="stat"><div class="card"><b id="st">Hors service</b>Statut</div><div class="card"><b id="du">0 min</b>Durée en cours</div></div><button class="btn" id="bs">Prendre mon service</button>
+<h3 style="font-size:1.6rem;margin:28px 0 10px">Pompiers en service</h3><div class="card" id="on"></div></div>
+<div id="pay" hidden><div class="tabs" id="per"><button class="tab" data-d="7" aria-selected="true">7 jours</button><button class="tab" data-d="30" aria-selected="false">30 jours</button><button class="tab" data-d="0" aria-selected="false">Tout</button></div><div class="card" style="overflow:auto"><table><thead><tr><th>Matricule</th><th>Pompier</th><th>Grade</th><th class="r">Heures</th><th class="r">Primes</th><th class="r">Paye</th></tr></thead><tbody id="pt"></tbody></table></div><p class="sub" style="margin-top:10px">Paye = heures de service × taux horaire + primes.</p></div>
+<div id="adm" hidden><div class="grid2" style="display:grid;gap:18px">
+<form class="box" id="fp"><h3 class="full" style="font-size:1.5rem">Attribuer une prime</h3><label>Pompier<select id="ps"></select></label><label>Montant (€)<input id="pm" type="number" min="1" required></label><label class="full">Motif<input id="pr" required></label><div class="full"><button class="btn">Verser la prime</button></div><div class="msg" id="pmsg"></div></form>
+<form class="box" id="fu"><h3 class="full" style="font-size:1.5rem">Créer un compte pompier</h3><label>Matricule<input id="um" required></label><label>Nom et prénom RP<input id="un" required></label><label>Grade<select id="ug"></select></label><label>Mot de passe (6+ car.)<input id="up" type="password" minlength="6" required></label><label class="full" style="flex-direction:row;align-items:center"><input type="checkbox" id="ua" style="width:auto"> Accès administration (haut gradé)</label><div class="full"><button class="btn">Créer le compte</button></div><div class="msg" id="umsg"></div></form></div></div>
+</div></main>
+<script type="module">
+/* ====== CONFIGURATION : colle ici la config de ton projet Firebase ====== */
+const FIREBASE={apiKey:"",authDomain:"",projectId:"",appId:""};
+const TAUX=60;            // € versés par heure de service
+const DOMAINE="@belgacity.rp"; // matricule → identifiant interne
+const GRADES=["Sapeur","Caporal","Sergent","Lieutenant","Capitaine","Commandant","Lieutenant-colonel","Colonel"];
+/* ======================================================================= */
+import{initializeApp}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import{getAuth,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut,onAuthStateChanged}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import{getFirestore,doc,getDoc,setDoc,addDoc,deleteDoc,getDocs,collection,onSnapshot}from"https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const say=(el,t,ok)=>{el.className="msg "+(ok?"ok":"ko");el.textContent=t};
+if(!FIREBASE.apiKey){say($("#lm"),"Firebase n’est pas configuré : renseigne FIREBASE dans portail.html.",0)}
+const app=initializeApp(FIREBASE),auth=getAuth(app),db=getFirestore(app);let me=null,start=null,unsub=null,tick=null,per=7;
+$("#ug").innerHTML=GRADES.map(g=>`<option>${g}</option>`).join("");
+$("#lg").onsubmit=async e=>{e.preventDefault();try{await signInWithEmailAndPassword(auth,$("#mat").value.trim().toLowerCase()+DOMAINE,$("#pw").value)}catch(_){say($("#lm"),"Matricule ou mot de passe incorrect.",0)}};
+$("#out").onclick=e=>{e.preventDefault();signOut(auth)};
+onAuthStateChanged(auth,async u=>{
+ if(unsub)unsub();clearInterval(tick);
+ if(!u){me=null;$("#lg").hidden=false;$("#app").hidden=true;$("#out").hidden=true;return}
+ const s=await getDoc(doc(db,"users",u.uid));
+ if(!s.exists()){await signOut(auth);say($("#lm"),"Compte non autorisé : fiche pompier introuvable.",0);return}
+ me={uid:u.uid,...s.data()};$("#lg").hidden=true;$("#app").hidden=false;$("#out").hidden=false;$("#tadm").hidden=!me.admin;
+ $("#hi").textContent=`Bonjour ${me.nom}`;$("#who").textContent=`${me.grade} – matricule ${me.matricule}`;
+ unsub=onSnapshot(collection(db,"enservice"),q=>{const L=q.docs.map(d=>d.data());const mine=q.docs.find(d=>d.id===me.uid);start=mine?mine.data().start:null;
+  $("#on").innerHTML=L.length?L.map(x=>`<div class="row"><span>${esc(x.nom)} <small>(${esc(x.grade)} – ${esc(x.matricule)})</small></span><span class="tag">En service</span></div>`).join(""):'<div class="row">Personne n’est en service.</div>';
+  $("#st").textContent=start?"En service":"Hors service";$("#bs").textContent=start?"Terminer mon service":"Prendre mon service";upd()});
+ tick=setInterval(upd,30000);
+});
+function upd(){$("#du").textContent=start?Math.floor((Date.now()-start)/60000)+" min":"0 min"}
+$("#bs").onclick=async()=>{const r=doc(db,"enservice",me.uid);
+ if(!start){await setDoc(r,{nom:me.nom,matricule:me.matricule,grade:me.grade,start:Date.now()})}
+ else{const min=Math.max(1,Math.round((Date.now()-start)/60000));await addDoc(collection(db,"services"),{uid:me.uid,nom:me.nom,matricule:me.matricule,grade:me.grade,minutes:min,end:Date.now()});await deleteDoc(r)}};
+$("#tb").onclick=e=>{const v=e.target.dataset.v;if(!v)return;document.querySelectorAll("#tb .tab").forEach(b=>b.setAttribute("aria-selected",b===e.target));["svc","pay","adm"].forEach(x=>$("#"+x).hidden=x!==v);if(v=="pay")paye();if(v=="adm")liste()};
+$("#per").onclick=e=>{if(e.target.dataset.d==null)return;per=+e.target.dataset.d;document.querySelectorAll("#per .tab").forEach(b=>b.setAttribute("aria-selected",b===e.target));paye()};
+async function paye(){const lim=per?Date.now()-per*864e5:0,[U,S,P]=await Promise.all(["users","services","primes"].map(c=>getDocs(collection(db,c))));
+ const A={};U.forEach(d=>A[d.id]={...d.data(),min:0,pr:0});
+ S.forEach(d=>{const x=d.data();if(A[x.uid]&&x.end>=lim)A[x.uid].min+=x.minutes});P.forEach(d=>{const x=d.data();if(A[x.uid]&&x.date>=lim)A[x.uid].pr+=x.montant});
+ const eu=n=>Math.round(n).toLocaleString("fr-FR")+" €";
+ $("#pt").innerHTML=Object.values(A).sort((a,b)=>GRADES.indexOf(b.grade)-GRADES.indexOf(a.grade)).map(a=>`<tr><td>${esc(a.matricule)}</td><td>${esc(a.nom)}</td><td>${esc(a.grade)}</td><td class="r">${(a.min/60).toFixed(1)} h</td><td class="r">${eu(a.pr)}</td><td class="r"><b>${eu(a.min/60*TAUX+a.pr)}</b></td></tr>`).join("")}
+async function liste(){const U=await getDocs(collection(db,"users"));$("#ps").innerHTML=U.docs.map(d=>`<option value="${d.id}">${esc(d.data().matricule)} – ${esc(d.data().nom)}</option>`).join("")}
+$("#fp").onsubmit=async e=>{e.preventDefault();const id=$("#ps").value,u=(await getDoc(doc(db,"users",id))).data();
+ try{await addDoc(collection(db,"primes"),{uid:id,nom:u.nom,montant:+$("#pm").value,motif:$("#pr").value,date:Date.now(),par:me.nom});say($("#pmsg"),"Prime versée à "+u.nom+".",1);e.target.reset()}catch(_){say($("#pmsg"),"Échec : droits insuffisants.",0)}};
+$("#fu").onsubmit=async e=>{e.preventDefault();const m=$("#um").value.trim().toLowerCase();
+ try{const a2=initializeApp(FIREBASE,"sec"+Date.now()),au=getAuth(a2);const c=await createUserWithEmailAndPassword(au,m+DOMAINE,$("#up").value);await signOut(au);
+  await setDoc(doc(db,"users",c.user.uid),{matricule:m,nom:$("#un").value.trim(),grade:$("#ug").value,admin:$("#ua").checked});say($("#umsg"),"Compte créé : matricule "+m+".",1);e.target.reset()}catch(err){say($("#umsg"),"Échec : matricule déjà utilisé ou mot de passe trop court.",0)}};
+</script></body></html>
